@@ -8,23 +8,22 @@ import {
 } from "react-native";
 import {faker} from "@faker-js/faker";
 import {useRef, useState} from "react";
+import {thumbnails} from "./thumbnails";
+import {Image} from "expo-image";
+import {SafeAreaView} from "react-native-safe-area-context";
 
 const SCREEN_WIDTH = Dimensions.get("screen").width;
 
 const THUMBNAIL_WIDTH = 40;
 const THUMBNAIL_HEIGHT = 40;
+const GAP = 10;
 
 faker.seed(10);
 
-const data = [...Array(60).keys()].map(() => ({
+const data = thumbnails.map((thumbnail) => ({
   key: faker.string.uuid(),
-  job: faker.animal.cat(),
+  image: thumbnail,
 }));
-
-const _colors = {
-  active: "red",
-  inactive: "blue",
-};
 
 export default function Page() {
   const [activeIndex, setActiveIndex] = useState<number>(0);
@@ -39,96 +38,87 @@ export default function Page() {
   };
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView
+      style={{backgroundColor: "white", flex: 1, display: "flex", gap: 24}}
+    >
       <View
         style={{
-          height: 40,
-          width: THUMBNAIL_WIDTH,
-          backgroundColor: "transparent",
-          borderWidth: 1,
-          borderBottomColor: "red",
-          borderRightColor: "transparent",
-          borderLeftColor: "transparent",
-          borderTopColor: "transparent",
-          position: "absolute",
-          top: 220,
-          left: Dimensions.get("screen").width / 2 - THUMBNAIL_WIDTH / 2,
-          right: 0,
-          bottom: 0,
-          zIndex: 100,
-        }}
-      />
-
-      <View
-        style={{
-          width: 200,
-          height: 200,
+          flex: 1,
         }}
       >
-        <Text>{activeIndex}</Text>
+        <Image
+          source={data[activeIndex].image}
+          contentFit="contain"
+          style={{
+            flex: 1,
+          }}
+        />
       </View>
-      <FlatList
-        ref={ref}
-        data={data}
-        initialScrollIndex={activeIndex}
-        getItemLayout={(_, index) => ({
-          length: THUMBNAIL_WIDTH,
-          offset: THUMBNAIL_WIDTH * index,
-          index,
-        })}
-        keyExtractor={(item) => item.key}
-        contentContainerStyle={{
-          paddingLeft: SCREEN_WIDTH / 2 - THUMBNAIL_WIDTH / 2,
-          paddingRight: SCREEN_WIDTH / 2 - THUMBNAIL_WIDTH / 2,
+      <View
+        style={{
+          height: THUMBNAIL_HEIGHT * 2,
         }}
-        showsHorizontalScrollIndicator={false}
-        viewabilityConfig={{
-          viewAreaCoveragePercentThreshold: THUMBNAIL_WIDTH / 2,
-        }}
-        snapToInterval={THUMBNAIL_WIDTH}
-        onViewableItemsChanged={({viewableItems}) => {
-          const [item] = viewableItems;
+      >
+        <FlatList
+          ref={ref}
+          data={data}
+          initialScrollIndex={activeIndex}
+          getItemLayout={(_, index) => ({
+            length: THUMBNAIL_WIDTH + GAP,
+            offset: (THUMBNAIL_WIDTH + GAP) * index,
+            index,
+          })}
+          contentContainerStyle={{
+            paddingLeft: SCREEN_WIDTH / 2 - THUMBNAIL_WIDTH / 2,
+            paddingRight: SCREEN_WIDTH / 2 - THUMBNAIL_WIDTH / 2,
+            gap: GAP,
+          }}
+          showsHorizontalScrollIndicator={false}
+          snapToInterval={THUMBNAIL_WIDTH + GAP}
+          onViewableItemsChanged={({viewableItems, changed}) => {
+            const [item] = viewableItems;
+            if (!item) return;
+            if (item?.index === null) return;
+            if (isNaN(item.index)) return;
+            if (item.index === data.length) return;
 
-          if (!item) return;
-          if (item?.index === null) return;
-          if (isNaN(item.index)) return;
-          if (item.index === data.length) return;
-
-          setActiveIndex(item.index);
-        }}
-        horizontal
-        renderItem={({index}) => {
-          return (
-            <TouchableOpacity onPress={() => handleThumbnailPress(index)}>
-              <View
-                style={{
-                  width: THUMBNAIL_WIDTH,
-                  height: THUMBNAIL_HEIGHT,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  borderWidth: 1,
-                  borderColor:
-                    index === activeIndex ? _colors.active : _colors.inactive,
-                }}
+            setActiveIndex(item.index);
+          }}
+          horizontal={true}
+          renderItem={({item, index}) => {
+            return (
+              <TouchableOpacity
+                onPress={() => handleThumbnailPress(index)}
+                activeOpacity={1}
               >
-                <Text style={{color: "#36303F", fontWeight: "700"}}>
-                  {index}
-                </Text>
-              </View>
-            </TouchableOpacity>
-          );
+                <Image
+                  source={item.image}
+                  style={styles.image}
+                  contentFit="contain"
+                />
+              </TouchableOpacity>
+            );
+          }}
+        />
+      </View>
+      <View
+        style={{
+          width: THUMBNAIL_WIDTH,
+          backgroundColor: "blue",
+          height: 1,
+          marginLeft: "auto",
+          marginRight: "auto",
+          marginBottom: 24,
         }}
       />
-    </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    height: "100%",
-  },
   image: {
     flex: 1,
+    width: THUMBNAIL_WIDTH,
+    height: THUMBNAIL_HEIGHT,
   },
 });
