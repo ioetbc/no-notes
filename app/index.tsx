@@ -1,28 +1,19 @@
-import {
-  StyleSheet,
-  Text,
-  View,
-  FlatList,
-  TouchableOpacity,
-  Dimensions,
-} from "react-native";
-import {faker} from "@faker-js/faker";
+import {StyleSheet, View, FlatList, TouchableOpacity} from "react-native";
 import {useRef, useState} from "react";
 import {thumbnails} from "./thumbnails";
 import {Image} from "expo-image";
 import {SafeAreaView} from "react-native-safe-area-context";
-
-const SCREEN_WIDTH = Dimensions.get("screen").width;
-
-const THUMBNAIL_WIDTH = 40;
-const THUMBNAIL_HEIGHT = 40;
-const GAP = 10;
-
-faker.seed(10);
+import {
+  SCREEN_WIDTH,
+  THUMBNAIL_GAP,
+  THUMBNAIL_HEIGHT,
+  THUMBNAIL_WIDTH,
+  THUMBNAIL_WIDTH_AND_GAP,
+} from "@/consts";
 
 const data = thumbnails.map((thumbnail) => ({
-  key: faker.string.uuid(),
-  image: thumbnail,
+  key: thumbnail.key,
+  image: thumbnail.src,
 }));
 
 export default function Page() {
@@ -64,23 +55,20 @@ export default function Page() {
           data={data}
           initialScrollIndex={activeIndex}
           getItemLayout={(_, index) => ({
-            length: THUMBNAIL_WIDTH + GAP,
-            offset: (THUMBNAIL_WIDTH + GAP) * index,
+            length: THUMBNAIL_WIDTH_AND_GAP,
+            offset: THUMBNAIL_WIDTH_AND_GAP * index,
             index,
           })}
           contentContainerStyle={{
             paddingLeft: SCREEN_WIDTH / 2 - THUMBNAIL_WIDTH / 2,
             paddingRight: SCREEN_WIDTH / 2 - THUMBNAIL_WIDTH / 2,
-            gap: GAP,
+            gap: THUMBNAIL_GAP,
           }}
           showsHorizontalScrollIndicator={false}
-          snapToInterval={THUMBNAIL_WIDTH + GAP}
-          onViewableItemsChanged={({viewableItems, changed}) => {
+          snapToInterval={THUMBNAIL_WIDTH_AND_GAP}
+          onViewableItemsChanged={({viewableItems}) => {
             const [item] = viewableItems;
-            if (!item) return;
-            if (item?.index === null) return;
-            if (isNaN(item.index)) return;
-            if (item.index === data.length) return;
+            if (!item || item?.index === null) return;
 
             setActiveIndex(item.index);
           }}
