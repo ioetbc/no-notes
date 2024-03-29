@@ -3,7 +3,7 @@ import {Text, StyleSheet} from "react-native";
 import BottomSheet, {BottomSheetView} from "@gorhom/bottom-sheet";
 import {BOTTOM_SHEET_DEFAULT_HEIGHT, SCREEN_HEIGHT} from "@/consts";
 
-export const Sheet = (styles: any) => {
+export const Sheet = () => {
   const bottomSheetRef = useRef<BottomSheet>(null);
 
   const handleSheetChanges = useCallback((index: number) => {
@@ -12,15 +12,14 @@ export const Sheet = (styles: any) => {
 
   return (
     <BottomSheet
-      style={styles}
       ref={bottomSheetRef}
       onChange={handleSheetChanges}
       snapPoints={[BOTTOM_SHEET_DEFAULT_HEIGHT, "100%"]}
-      handleStyle={{backgroundColor: "red"}}
-      handleIndicatorStyle={{backgroundColor: "blue"}}
+      handleStyle={{backgroundColor: "blue"}}
+      handleIndicatorStyle={{backgroundColor: "white"}}
     >
       <BottomSheetView style={blah.contentContainer}>
-        <Text>Awesome 🎉</Text>
+        <Text>hello 🎉</Text>
       </BottomSheetView>
     </BottomSheet>
   );
@@ -30,7 +29,7 @@ const blah = StyleSheet.create({
   contentContainer: {
     flex: 1,
     alignItems: "center",
-    position: "relative",
     display: "flex",
+    backgroundColor: "lightblue",
   },
 });

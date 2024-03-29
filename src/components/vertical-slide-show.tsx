@@ -17,16 +17,15 @@ export const VerticalSlideShow = ({images}: Props) => {
         data={images}
         initialScrollIndex={0}
         getItemLayout={(_, index) => ({
-          length: HERO_IMAGE_HEIGHT,
-          offset: HERO_IMAGE_HEIGHT * index,
+          length: HERO_IMAGE_HEIGHT * 0.85,
+          offset: HERO_IMAGE_HEIGHT * 0.85 * index,
           index,
         })}
-        contentContainerStyle={
-          {
-            // paddingBottom: BOTTOM_SHEET_DEFAULT_HEIGHT,
-          }
-        }
-        snapToInterval={HERO_IMAGE_HEIGHT}
+        contentContainerStyle={{
+          // height: HERO_IMAGE_HEIGHT * 0.9 * images.length,
+          paddingBottom: BOTTOM_SHEET_DEFAULT_HEIGHT * 0.85,
+        }}
+        snapToInterval={HERO_IMAGE_HEIGHT * 0.85}
         decelerationRate="fast"
         renderItem={({item}) => {
           return (
@@ -40,8 +39,8 @@ export const VerticalSlideShow = ({images}: Props) => {
 
 const styles = StyleSheet.create({
   image: {
-    flex: 1,
-    height: HERO_IMAGE_HEIGHT,
-    backgroundColor: "blue",
+    // flex: 1,
+    height: HERO_IMAGE_HEIGHT * 0.85,
+    backgroundColor: "red",
   },
 });

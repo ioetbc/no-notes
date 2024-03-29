@@ -6,7 +6,7 @@ export const products = [
     images: [
       "https://img.ssensemedia.com/images/g_center,f_auto/241376M176006_1/burberry-black-check-coat.jpg",
       "https://img.ssensemedia.com/images/g_center,f_auto/222376M180027_1/burberry-brown-reversible-check-jacket.jpg",
-      "https://img.ssensemedia.com/images/g_center,f_auto/232376M180005_1/burberry-beige-and-black-check-reversible-jacket.jpg",
+      "https://img.ssensemedia.com/images/g_center,f_auto/222376M180027_1/burberry-brown-reversible-check-jacket.jpg",
     ],
   },
   {

@@ -10,7 +10,7 @@ export default function Page() {
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <SafeAreaView style={styles.thing}>
         <VerticalSlideShow images={products[activeIndex].images} />
         <ThumbnailCarousel
@@ -19,7 +19,7 @@ export default function Page() {
         />
       </SafeAreaView>
       <Sheet />
-    </SafeAreaView>
+    </View>
   );
 }
 
