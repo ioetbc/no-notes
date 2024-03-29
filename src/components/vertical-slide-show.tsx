@@ -1,25 +1,47 @@
+import {HERO_IMAGE_HEIGHT} from "@/consts";
 import {Image} from "expo-image";
-import React from "react";
-import {View} from "react-native";
+import React, {useRef} from "react";
+import {FlatList, StyleSheet} from "react-native";
 
 type Props = {
-  src: string;
+  images: string[];
 };
 
-export const VerticalSlideShow = ({src}: Props) => {
+export const VerticalSlideShow = ({images}: Props) => {
+  const ref = useRef<FlatList>(null);
+
   return (
-    <View
-      style={{
-        flex: 1,
-      }}
-    >
-      <Image
-        source={src}
-        contentFit="contain"
-        style={{
-          flex: 1,
+    <>
+      <FlatList
+        ref={ref}
+        data={images}
+        initialScrollIndex={0}
+        getItemLayout={(_, index) => ({
+          length: HERO_IMAGE_HEIGHT,
+          offset: HERO_IMAGE_HEIGHT * index,
+          index,
+        })}
+        contentContainerStyle={
+          {
+            // gap: 48,
+          }
+        }
+        snapToInterval={HERO_IMAGE_HEIGHT}
+        decelerationRate="fast"
+        renderItem={({item}) => {
+          return (
+            <Image source={item} style={styles.image} contentFit="contain" />
+          );
         }}
       />
-    </View>
+    </>
   );
 };
+
+const styles = StyleSheet.create({
+  image: {
+    flex: 1,
+    height: HERO_IMAGE_HEIGHT,
+    backgroundColor: "red",
+  },
+});

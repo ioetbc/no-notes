@@ -8,7 +8,7 @@ import {
   THUMBNAIL_WIDTH,
   THUMBNAIL_WIDTH_AND_GAP,
 } from "@/consts";
-import {thumbnails} from "app/thumbnails";
+import {products} from "app/products";
 
 type Props = {
   handleActiveIndex: (index: number) => void;
@@ -17,11 +17,6 @@ type Props = {
 
 export const ThumbnailCarousel = ({handleActiveIndex, activeIndex}: Props) => {
   const ref = useRef<FlatList>(null);
-
-  const data = thumbnails.map((thumbnail) => ({
-    key: thumbnail.key,
-    image: thumbnail.src,
-  }));
 
   const handleThumbnailPress = (index: number) => {
     if (index === activeIndex) return null;
@@ -35,11 +30,12 @@ export const ThumbnailCarousel = ({handleActiveIndex, activeIndex}: Props) => {
     <View
       style={{
         height: THUMBNAIL_HEIGHT * 2,
+        backgroundColor: "yellow",
       }}
     >
       <FlatList
         ref={ref}
-        data={data}
+        data={products}
         initialScrollIndex={activeIndex}
         getItemLayout={(_, index) => ({
           length: THUMBNAIL_WIDTH_AND_GAP,
@@ -69,7 +65,7 @@ export const ThumbnailCarousel = ({handleActiveIndex, activeIndex}: Props) => {
               activeOpacity={1}
             >
               <Image
-                source={item.image}
+                source={item.thumbnail}
                 style={styles.image}
                 contentFit="contain"
               />
