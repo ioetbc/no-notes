@@ -15,6 +15,12 @@ export default function HomeLayout() {
               title: "Profile",
             }}
           />
+          <Drawer.Screen
+            name="index"
+            options={{
+              headerShown: false,
+            }}
+          />
         </Drawer>
       </GestureHandlerRootView>
     </View>

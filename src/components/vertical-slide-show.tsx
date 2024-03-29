@@ -1,4 +1,4 @@
-import {HERO_IMAGE_HEIGHT} from "@/consts";
+import {BOTTOM_SHEET_DEFAULT_HEIGHT, HERO_IMAGE_HEIGHT} from "@/consts";
 import {Image} from "expo-image";
 import React, {useRef} from "react";
 import {FlatList, StyleSheet} from "react-native";
@@ -23,7 +23,7 @@ export const VerticalSlideShow = ({images}: Props) => {
         })}
         contentContainerStyle={
           {
-            // gap: 48,
+            // paddingBottom: BOTTOM_SHEET_DEFAULT_HEIGHT,
           }
         }
         snapToInterval={HERO_IMAGE_HEIGHT}
@@ -42,6 +42,6 @@ const styles = StyleSheet.create({
   image: {
     flex: 1,
     height: HERO_IMAGE_HEIGHT,
-    backgroundColor: "red",
+    backgroundColor: "blue",
   },
 });

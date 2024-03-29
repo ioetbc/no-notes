@@ -1,22 +1,34 @@
 import {useState} from "react";
-import {SafeAreaView} from "react-native";
+import {SafeAreaView, StyleSheet, View} from "react-native";
 import {products} from "./products";
 
 import {ThumbnailCarousel} from "@/components/thumbnail-carousel";
-import {Dash} from "@/components/dash";
 import {VerticalSlideShow} from "@/components/vertical-slide-show";
+import {Sheet} from "@/components/sheet";
 
 export default function Page() {
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
   return (
-    <SafeAreaView style={{backgroundColor: "white", flex: 1, display: "flex"}}>
-      <VerticalSlideShow images={products[activeIndex].images} />
-      <ThumbnailCarousel
-        handleActiveIndex={setActiveIndex}
-        activeIndex={activeIndex}
-      />
-      <Dash />
+    <SafeAreaView style={styles.container}>
+      <SafeAreaView style={styles.thing}>
+        <VerticalSlideShow images={products[activeIndex].images} />
+        <ThumbnailCarousel
+          handleActiveIndex={setActiveIndex}
+          activeIndex={activeIndex}
+        />
+      </SafeAreaView>
+      <Sheet />
     </SafeAreaView>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  thing: {
+    flex: 1,
+    backgroundColor: "orange",
+  },
+});
