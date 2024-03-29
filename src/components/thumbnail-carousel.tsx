@@ -2,7 +2,6 @@ import React, {useRef} from "react";
 import {FlatList, StyleSheet, TouchableOpacity, View} from "react-native";
 import {Image} from "expo-image";
 import {
-  HERO_IMAGE_HEIGHT,
   SCREEN_WIDTH,
   THUMBNAIL_GAP,
   THUMBNAIL_HEIGHT,
@@ -30,8 +29,7 @@ export const ThumbnailCarousel = ({handleActiveIndex, activeIndex}: Props) => {
   return (
     <View
       style={{
-        height: THUMBNAIL_HEIGHT * 2,
-        bottom: 124,
+        height: THUMBNAIL_HEIGHT,
         backgroundColor: "yellow",
       }}
     >
@@ -83,6 +81,5 @@ const styles = StyleSheet.create({
   image: {
     flex: 1,
     width: THUMBNAIL_WIDTH,
-    height: THUMBNAIL_HEIGHT,
   },
 });

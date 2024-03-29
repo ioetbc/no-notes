@@ -8,6 +8,9 @@ export const products = [
       "https://img.ssensemedia.com/images/g_center,f_auto/222376M180027_1/burberry-brown-reversible-check-jacket.jpg",
       "https://img.ssensemedia.com/images/g_center,f_auto/222376M180027_1/burberry-brown-reversible-check-jacket.jpg",
     ],
+    title: "title 1",
+    description: "lorem ipsum.",
+    price: 70,
   },
   {
     key: 2,
@@ -18,6 +21,9 @@ export const products = [
       "https://img.ssensemedia.com/images/g_center,f_auto/222376M180027_1/burberry-brown-reversible-check-jacket.jpg",
       "https://img.ssensemedia.com/images/g_center,f_auto/232376M180005_1/burberry-beige-and-black-check-reversible-jacket.jpg",
     ],
+    title: "title 2",
+    description: "lorem ipsum.",
+    price: 70,
   },
   {
     key: 3,
@@ -28,6 +34,9 @@ export const products = [
       "https://img.ssensemedia.com/images/g_center,f_auto/222376M180027_1/burberry-brown-reversible-check-jacket.jpg",
       "https://img.ssensemedia.com/images/g_center,f_auto/232376M180005_1/burberry-beige-and-black-check-reversible-jacket.jpg",
     ],
+    title: "title 3",
+    description: "lorem ipsum.",
+    price: 70,
   },
   {
     key: 4,
@@ -38,6 +47,9 @@ export const products = [
       "https://img.ssensemedia.com/images/g_center,f_auto/222376M180027_1/burberry-brown-reversible-check-jacket.jpg",
       "https://img.ssensemedia.com/images/g_center,f_auto/232376M180005_1/burberry-beige-and-black-check-reversible-jacket.jpg",
     ],
+    title: "title 4",
+    description: "lorem ipsum.",
+    price: 70,
   },
   {
     key: 5,
@@ -48,6 +60,9 @@ export const products = [
       "https://img.ssensemedia.com/images/g_center,f_auto/222376M180027_1/burberry-brown-reversible-check-jacket.jpg",
       "https://img.ssensemedia.com/images/g_center,f_auto/232376M180005_1/burberry-beige-and-black-check-reversible-jacket.jpg",
     ],
+    title: "title 5",
+    description: "lorem ipsum.",
+    price: 70,
   },
   {
     key: 6,
@@ -58,6 +73,9 @@ export const products = [
       "https://img.ssensemedia.com/images/g_center,f_auto/222376M180027_1/burberry-brown-reversible-check-jacket.jpg",
       "https://img.ssensemedia.com/images/g_center,f_auto/232376M180005_1/burberry-beige-and-black-check-reversible-jacket.jpg",
     ],
+    title: "title 6",
+    description: "lorem ipsum.",
+    price: 70,
   },
   {
     key: 7,
@@ -68,6 +86,9 @@ export const products = [
       "https://img.ssensemedia.com/images/g_center,f_auto/222376M180027_1/burberry-brown-reversible-check-jacket.jpg",
       "https://img.ssensemedia.com/images/g_center,f_auto/232376M180005_1/burberry-beige-and-black-check-reversible-jacket.jpg",
     ],
+    title: "title 7",
+    description: "lorem ipsum.",
+    price: 70,
   },
   {
     key: 8,
@@ -78,6 +99,9 @@ export const products = [
       "https://img.ssensemedia.com/images/g_center,f_auto/222376M180027_1/burberry-brown-reversible-check-jacket.jpg",
       "https://img.ssensemedia.com/images/g_center,f_auto/232376M180005_1/burberry-beige-and-black-check-reversible-jacket.jpg",
     ],
+    title: "title 8",
+    description: "lorem ipsum.",
+    price: 70,
   },
   {
     key: 9,
@@ -88,6 +112,9 @@ export const products = [
       "https://img.ssensemedia.com/images/g_center,f_auto/222376M180027_1/burberry-brown-reversible-check-jacket.jpg",
       "https://img.ssensemedia.com/images/g_center,f_auto/232376M180005_1/burberry-beige-and-black-check-reversible-jacket.jpg",
     ],
+    title: "title 9",
+    description: "lorem ipsum.",
+    price: 70,
   },
   {
     key: 10,
@@ -98,6 +125,9 @@ export const products = [
       "https://img.ssensemedia.com/images/g_center,f_auto/222376M180027_1/burberry-brown-reversible-check-jacket.jpg",
       "https://img.ssensemedia.com/images/g_center,f_auto/232376M180005_1/burberry-beige-and-black-check-reversible-jacket.jpg",
     ],
+    title: "title 10",
+    description: "lorem ipsum.",
+    price: 70,
   },
   {
     key: 11,
@@ -108,6 +138,9 @@ export const products = [
       "https://img.ssensemedia.com/images/g_center,f_auto/222376M180027_1/burberry-brown-reversible-check-jacket.jpg",
       "https://img.ssensemedia.com/images/g_center,f_auto/232376M180005_1/burberry-beige-and-black-check-reversible-jacket.jpg",
     ],
+    title: "title 11",
+    description: "lorem ipsum.",
+    price: 70,
   },
   {
     key: 12,
@@ -118,6 +151,9 @@ export const products = [
       "https://img.ssensemedia.com/images/g_center,f_auto/222376M180027_1/burberry-brown-reversible-check-jacket.jpg",
       "https://img.ssensemedia.com/images/g_center,f_auto/232376M180005_1/burberry-beige-and-black-check-reversible-jacket.jpg",
     ],
+    title: "title 12",
+    description: "lorem ipsum.",
+    price: 70,
   },
   {
     key: 13,
@@ -128,6 +164,9 @@ export const products = [
       "https://img.ssensemedia.com/images/g_center,f_auto/222376M180027_1/burberry-brown-reversible-check-jacket.jpg",
       "https://img.ssensemedia.com/images/g_center,f_auto/232376M180005_1/burberry-beige-and-black-check-reversible-jacket.jpg",
     ],
+    title: "title 13",
+    description: "lorem ipsum.",
+    price: 70,
   },
   {
     key: 14,
@@ -138,6 +177,9 @@ export const products = [
       "https://img.ssensemedia.com/images/g_center,f_auto/222376M180027_1/burberry-brown-reversible-check-jacket.jpg",
       "https://img.ssensemedia.com/images/g_center,f_auto/232376M180005_1/burberry-beige-and-black-check-reversible-jacket.jpg",
     ],
+    title: "title 14",
+    description: "lorem ipsum.",
+    price: 70,
   },
   {
     key: 15,
@@ -148,6 +190,9 @@ export const products = [
       "https://img.ssensemedia.com/images/g_center,f_auto/222376M180027_1/burberry-brown-reversible-check-jacket.jpg",
       "https://img.ssensemedia.com/images/g_center,f_auto/232376M180005_1/burberry-beige-and-black-check-reversible-jacket.jpg",
     ],
+    title: "title 15",
+    description: "lorem ipsum.",
+    price: 70,
   },
   {
     key: 16,
@@ -158,6 +203,9 @@ export const products = [
       "https://img.ssensemedia.com/images/g_center,f_auto/222376M180027_1/burberry-brown-reversible-check-jacket.jpg",
       "https://img.ssensemedia.com/images/g_center,f_auto/232376M180005_1/burberry-beige-and-black-check-reversible-jacket.jpg",
     ],
+    title: "title 16",
+    description: "lorem ipsum.",
+    price: 70,
   },
   {
     key: 17,
@@ -168,6 +216,9 @@ export const products = [
       "https://img.ssensemedia.com/images/g_center,f_auto/222376M180027_1/burberry-brown-reversible-check-jacket.jpg",
       "https://img.ssensemedia.com/images/g_center,f_auto/232376M180005_1/burberry-beige-and-black-check-reversible-jacket.jpg",
     ],
+    title: "title 17",
+    description: "lorem ipsum.",
+    price: 70,
   },
   {
     key: 18,
@@ -178,6 +229,9 @@ export const products = [
       "https://img.ssensemedia.com/images/g_center,f_auto/222376M180027_1/burberry-brown-reversible-check-jacket.jpg",
       "https://img.ssensemedia.com/images/g_center,f_auto/232376M180005_1/burberry-beige-and-black-check-reversible-jacket.jpg",
     ],
+    title: "title 18",
+    description: "lorem ipsum.",
+    price: 70,
   },
   {
     key: 19,
@@ -188,6 +242,9 @@ export const products = [
       "https://img.ssensemedia.com/images/g_center,f_auto/222376M180027_1/burberry-brown-reversible-check-jacket.jpg",
       "https://img.ssensemedia.com/images/g_center,f_auto/232376M180005_1/burberry-beige-and-black-check-reversible-jacket.jpg",
     ],
+    title: "title 19",
+    description: "lorem ipsum.",
+    price: 70,
   },
   {
     key: 20,
@@ -198,185 +255,8 @@ export const products = [
       "https://img.ssensemedia.com/images/g_center,f_auto/222376M180027_1/burberry-brown-reversible-check-jacket.jpg",
       "https://img.ssensemedia.com/images/g_center,f_auto/232376M180005_1/burberry-beige-and-black-check-reversible-jacket.jpg",
     ],
+    title: "title 20",
+    description: "lorem ipsum.",
+    price: 70,
   },
-  // {
-  //   key: 21,
-  //   thumbnail:
-  //     "https://img.ssensemedia.com/images/g_center,f_auto/231731F096015_1/open-yy-green-check-sweater.jpg",
-  // },
-  // {
-  //   key: 22,
-  //   thumbnail:
-  //     "https://img.ssensemedia.com/images/g_center,f_auto/241270M195006_1/ferragamo-black-sports-coat.jpg",
-  // },
-  // {
-  //   key: 23,
-  //   thumbnail:
-  //     "https://img.ssensemedia.com/images/g_center,f_auto/241376M180005_1/burberry-green-check-jacket.jpg",
-  // },
-  // {
-  //   key: 24,
-  //   thumbnail:
-  //     "https://img.ssensemedia.com/images/g_center,f_auto/241376M212014_1/burberry-green-striped-polo.jpg",
-  // },
-  // {
-  //   key: 25,
-  //   thumbnail:
-  //     "https://img.ssensemedia.com/images/g_center,f_auto/241376M180007_1/burberry-green-check-jacket.jpg",
-  // },
-  // {
-  //   key: 26,
-  //   thumbnail:
-  //     "https://img.ssensemedia.com/images/g_center,f_auto/241325M180000_1/coperni-beige-open-elbow-jacket.jpg",
-  // },
-  // {
-  //   key: 27,
-  //   thumbnail:
-  //     "https://img.ssensemedia.com/images/g_center,f_auto/232342M192012_1/balenciaga-navy-check-shirt.jpg",
-  // },
-  // {
-  //   key: 28,
-  //   thumbnail:
-  //     "https://img.ssensemedia.com/images/g_center,f_auto/241376M212009_1/burberry-green-rose-polo.jpg",
-  // },
-  // {
-  //   key: 29,
-  //   thumbnail:
-  //     "https://img.ssensemedia.com/images/g_center,f_auto/241376M176006_1/burberry-black-check-coat.jpg",
-  // },
-  // {
-  //   key: 30,
-  //   thumbnail:
-  //     "https://img.ssensemedia.com/images/g_center,f_auto/222376M180027_1/burberry-brown-reversible-check-jacket.jpg",
-  // },
-  // {
-  //   key: 31,
-  //   thumbnail:
-  //     "https://img.ssensemedia.com/images/g_center,f_auto/232376M180005_1/burberry-beige-and-black-check-reversible-jacket.jpg",
-  // },
-  // {
-  //   key: 32,
-  //   thumbnail:
-  //     "https://img.ssensemedia.com/images/g_center,f_auto/241678M183000_1/aaron-esh-gray-double-breasted-peacoat.jpg",
-  // },
-  // {
-  //   key: 33,
-  //   thumbnail:
-  //     "https://img.ssensemedia.com/images/g_center,f_auto/232055F110003_1/rag-and-bone-black-striped-t-shirt.jpg",
-  // },
-  // {
-  //   key: 34,
-  //   thumbnail:
-  //     "https://img.ssensemedia.com/images/g_center,f_auto/232985F096002_1/kiko-kostadinov-multicolor-striped-curl-sweater.jpg",
-  // },
-  // {
-  //   key: 35,
-  //   thumbnail:
-  //     "https://img.ssensemedia.com/images/g_center,f_auto/231731F096015_1/open-yy-green-check-sweater.jpg",
-  // },
-  // {
-  //   key: 36,
-  //   thumbnail:
-  //     "https://img.ssensemedia.com/images/g_center,f_auto/241270M195006_1/ferragamo-black-sports-coat.jpg",
-  // },
-  // {
-  //   key: 37,
-  //   thumbnail:
-  //     "https://img.ssensemedia.com/images/g_center,f_auto/241376M180005_1/burberry-green-check-jacket.jpg",
-  // },
-  // {
-  //   key: 38,
-  //   thumbnail:
-  //     "https://img.ssensemedia.com/images/g_center,f_auto/241376M212014_1/burberry-green-striped-polo.jpg",
-  // },
-  // {
-  //   key: 39,
-  //   thumbnail:
-  //     "https://img.ssensemedia.com/images/g_center,f_auto/241376M180007_1/burberry-green-check-jacket.jpg",
-  // },
-  // {
-  //   key: 40,
-  //   thumbnail:
-  //     "https://img.ssensemedia.com/images/g_center,f_auto/241325M180000_1/coperni-beige-open-elbow-jacket.jpg",
-  // },
-  // {
-  //   key: 41,
-  //   thumbnail:
-  //     "https://img.ssensemedia.com/images/g_center,f_auto/232342M192012_1/balenciaga-navy-check-shirt.jpg",
-  // },
-  // {
-  //   key: 42,
-  //   thumbnail:
-  //     "https://img.ssensemedia.com/images/g_center,f_auto/241376M212009_1/burberry-green-rose-polo.jpg",
-  // },
-  // {
-  //   key: 43,
-  //   thumbnail:
-  //     "https://img.ssensemedia.com/images/g_center,f_auto/241376M176006_1/burberry-black-check-coat.jpg",
-  // },
-  // {
-  //   key: 44,
-  //   thumbnail:
-  //     "https://img.ssensemedia.com/images/g_center,f_auto/222376M180027_1/burberry-brown-reversible-check-jacket.jpg",
-  // },
-  // {
-  //   key: 45,
-  //   thumbnail:
-  //     "https://img.ssensemedia.com/images/g_center,f_auto/232376M180005_1/burberry-beige-and-black-check-reversible-jacket.jpg",
-  // },
-  // {
-  //   key: 46,
-  //   thumbnail:
-  //     "https://img.ssensemedia.com/images/g_center,f_auto/241678M183000_1/aaron-esh-gray-double-breasted-peacoat.jpg",
-  // },
-  // {
-  //   key: 47,
-  //   thumbnail:
-  //     "https://img.ssensemedia.com/images/g_center,f_auto/232055F110003_1/rag-and-bone-black-striped-t-shirt.jpg",
-  // },
-  // {
-  //   key: 48,
-  //   thumbnail:
-  //     "https://img.ssensemedia.com/images/g_center,f_auto/232985F096002_1/kiko-kostadinov-multicolor-striped-curl-sweater.jpg",
-  // },
-  // {
-  //   key: 49,
-  //   thumbnail:
-  //     "https://img.ssensemedia.com/images/g_center,f_auto/231731F096015_1/open-yy-green-check-sweater.jpg",
-  // },
-  // {
-  //   key: 50,
-  //   thumbnail:
-  //     "https://img.ssensemedia.com/images/g_center,f_auto/241270M195006_1/ferragamo-black-sports-coat.jpg",
-  // },
-  // {
-  //   key: 51,
-  //   thumbnail:
-  //     "https://img.ssensemedia.com/images/g_center,f_auto/241376M180005_1/burberry-green-check-jacket.jpg",
-  // },
-  // {
-  //   key: 52,
-  //   thumbnail:
-  //     "https://img.ssensemedia.com/images/g_center,f_auto/241376M212014_1/burberry-green-striped-polo.jpg",
-  // },
-  // {
-  //   key: 53,
-  //   thumbnail:
-  //     "https://img.ssensemedia.com/images/g_center,f_auto/241376M180007_1/burberry-green-check-jacket.jpg",
-  // },
-  // {
-  //   key: 54,
-  //   thumbnail:
-  //     "https://img.ssensemedia.com/images/g_center,f_auto/241325M180000_1/coperni-beige-open-elbow-jacket.jpg",
-  // },
-  // {
-  //   key: 55,
-  //   thumbnail:
-  //     "https://img.ssensemedia.com/images/g_center,f_auto/232342M192012_1/balenciaga-navy-check-shirt.jpg",
-  // },
-  // {
-  //   key: 56,
-  //   thumbnail:
-  //     "https://img.ssensemedia.com/images/g_center,f_auto/241376M212009_1/burberry-green-rose-polo.jpg",
-  // },
 ];

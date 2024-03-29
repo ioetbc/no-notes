@@ -1,7 +1,9 @@
-import {BOTTOM_SHEET_DEFAULT_HEIGHT, HERO_IMAGE_HEIGHT} from "@/consts";
+import {HERO_IMAGE_HEIGHT} from "@/consts";
 import {Image} from "expo-image";
 import React, {useRef} from "react";
-import {FlatList, StyleSheet} from "react-native";
+import {FlatList, StyleSheet, View} from "react-native";
+import Carousel from "react-native-reanimated-carousel";
+import {ThumbnailCarousel} from "./thumbnail-carousel";
 
 type Props = {
   images: string[];
@@ -12,26 +14,22 @@ export const VerticalSlideShow = ({images}: Props) => {
 
   return (
     <>
-      <FlatList
-        ref={ref}
+      <Carousel
         data={images}
-        initialScrollIndex={0}
-        getItemLayout={(_, index) => ({
-          length: HERO_IMAGE_HEIGHT * 0.85,
-          offset: HERO_IMAGE_HEIGHT * 0.85 * index,
-          index,
-        })}
-        contentContainerStyle={{
-          // height: HERO_IMAGE_HEIGHT * 0.9 * images.length,
-          paddingBottom: BOTTOM_SHEET_DEFAULT_HEIGHT * 0.85,
-        }}
-        snapToInterval={HERO_IMAGE_HEIGHT * 0.85}
-        decelerationRate="fast"
-        renderItem={({item}) => {
+        renderItem={(item) => {
+          console.log("item", item);
           return (
-            <Image source={item} style={styles.image} contentFit="contain" />
+            <View style={{backgroundColor: "orange", flex: 1}}>
+              <Image
+                source={item.item}
+                style={styles.image}
+                contentFit="contain"
+              />
+            </View>
           );
         }}
+        vertical
+        height={HERO_IMAGE_HEIGHT}
       />
     </>
   );
@@ -40,7 +38,7 @@ export const VerticalSlideShow = ({images}: Props) => {
 const styles = StyleSheet.create({
   image: {
     // flex: 1,
-    height: HERO_IMAGE_HEIGHT * 0.85,
+    height: HERO_IMAGE_HEIGHT,
     backgroundColor: "red",
   },
 });

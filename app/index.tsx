@@ -18,7 +18,10 @@ export default function Page() {
           activeIndex={activeIndex}
         />
       </SafeAreaView>
-      <Sheet />
+      <Sheet
+        title={products[activeIndex].title}
+        description={products[activeIndex].description}
+      />
     </View>
   );
 }
