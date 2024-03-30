@@ -1,20 +1,26 @@
-import {HERO_IMAGE_HEIGHT} from "@/consts";
+import React, {useEffect, useRef} from "react";
+import {Button, StyleSheet, View} from "react-native";
 import {Image} from "expo-image";
-import React, {useRef} from "react";
-import {FlatList, StyleSheet, View} from "react-native";
+import {HERO_IMAGE_HEIGHT} from "@/consts";
 import Carousel from "react-native-reanimated-carousel";
-import {ThumbnailCarousel} from "./thumbnail-carousel";
 
 type Props = {
   images: string[];
+  activeIndex: number;
 };
 
-export const VerticalSlideShow = ({images}: Props) => {
-  const ref = useRef<FlatList>(null);
+export const VerticalSlideShow = ({images, activeIndex}: Props) => {
+  const ref = useRef<any>(null);
+
+  useEffect(() => {
+    if (activeIndex === 0) return;
+    ref.current.scrollTo({index: 0});
+  }, [activeIndex]);
 
   return (
     <>
       <Carousel
+        ref={ref}
         data={images}
         renderItem={(item) => {
           console.log("item", item);

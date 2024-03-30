@@ -12,7 +12,10 @@ export default function Page() {
   return (
     <View style={styles.container}>
       <SafeAreaView style={styles.thing}>
-        <VerticalSlideShow images={products[activeIndex].images} />
+        <VerticalSlideShow
+          images={products[activeIndex].images}
+          activeIndex={activeIndex}
+        />
         <ThumbnailCarousel
           handleActiveIndex={setActiveIndex}
           activeIndex={activeIndex}
